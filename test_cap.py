@@ -13,5 +13,10 @@ class TestCap(unittest.TestCase):
         result = cap.cap_text(text)
         self.assertEqual(result,'Monty Python')
 
+    def test_with_apostrophes(self):
+        text = "monty python's flying circus"
+        result = cap.cap_text(text)
+        self.assertEqual(result, "Monty Python's Flying Circus")
+
 if __name__ == '__main__':
     unittest.main()
